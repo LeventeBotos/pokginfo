@@ -12,7 +12,7 @@ import {
   Heart,
   MessageSquare,
 } from "lucide-react";
-
+//sd
 // Dummy data (replace with real data in your implementation)
 const categories = [
   {
