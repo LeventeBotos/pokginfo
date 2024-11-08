@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image"; // Import Image from next/image
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -12,7 +13,7 @@ import {
   Heart,
   MessageSquare,
 } from "lucide-react";
-//sd
+
 // Dummy data (replace with real data in your implementation)
 const categories = [
   {
@@ -149,7 +150,6 @@ const categories = [
     ],
   },
 ];
-
 export default function EnhancedSchoolInfoBoard() {
   const [activeCategory, setActiveCategory] = useState(0);
 
@@ -261,9 +261,11 @@ export default function EnhancedSchoolInfoBoard() {
             </CardHeader>
             <CardContent className="flex flex-col items-center">
               <p className="text-lg mb-4">Scan for more information:</p>
-              <img
-                src="/placeholder.svg?height=200&width=200"
+              <Image
+                src="/placeholder.svg"
                 alt="QR Code"
+                width={200}
+                height={200}
                 className="w-48 h-48"
               />
               <p className="mt-2 text-sm text-gray-600">
